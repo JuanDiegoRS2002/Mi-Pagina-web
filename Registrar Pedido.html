@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Registro Productos</h1>
+        <form id="formRegistro" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen:</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*" required>
+                <input type="hidden" id="nombre_imagen" name="nombre_imagen">
+            </div>
+            <script>
+                document.getElementById('imagen').addEventListener('change', function() {
+                    var nombreArchivo = this.files[0].name;
+                    document.getElementById('nombre_imagen').value = nombreArchivo;
+                });
+
+                document.getElementById('formRegistro').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    if (validarFormulario()) {
+                        var formData = new FormData(this);
+                        var xhr = new XMLHttpRequest();
+
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === XMLHttpRequest.DONE) {
+                                var respuesta = xhr.responseText;
+                                if (respuesta.includes('correctamente')) {
+                                    alert('Producto registrado correctamente.');
+                                    document.getElementById('formRegistro').reset();
+                                } else {
+                                    alert('Error al registrar el producto. Inténtalo de nuevo.');
+                                }
+                            }
+                        };
+
+                        xhr.open('POST', 'registrar_producto.php', true);
+                        xhr.send(formData);
+                    }
+                });
+
+                function validarFormulario() {
+                    var nombre = document.getElementById('nombre').value;
+                    var precioMayoreo = document.getElementById('precio_mayoreo').value;
+                    var precioMenudeo = document.getElementById('precio_menudeo').value;
+                    var existencias = document.getElementById('existencias').value;
+
+                    if (!/^[a-zA-Z]+$/.test(nombre)) {
+                        alert('El nombre solo puede contener letras.');
+                        return false;
+                    }
+
+                    if (isNaN(parseFloat(precioMayoreo)) || isNaN(parseFloat(precioMenudeo)) || isNaN(parseFloat(existencias))) {
+                        alert('Los campos de precio y existencias deben ser números.');
+                        return false;
+                    }
+
+                    return true;
+                }
+            </script>
+
+            <div class="mb-3">
+                <label for="categoria" class="form-label">Categoría:</label>
+                <select class="form-select" id="categoria" name="categoria">
+                    <option value="Frutas">Frutas</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio_mayoreo" class="form-label">Precio Mayoreo:</label>
+                <input type="number" class="form-control" id="precio_mayoreo" name="precio_mayoreo" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio_menudeo" class="form-label">Precio Menudeo:</label>
+                <input type="number" class="form-control" id="precio_menudeo" name="precio_menudeo" required>
+            </div>
+            <div class="mb-3">
+                <label for="existencias" class="form-label">Existencias (KG):</label>
+                <input type="number" class="form-control" id="existencias" name="existencias" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Producto</button>
+            <a href="index.html" class="btn btn-danger">Salir</a>
+        </form>
+    </div>
+</body>
+</html>

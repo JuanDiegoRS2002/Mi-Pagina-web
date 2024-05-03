@@ -1,0 +1,420 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto principal */
+    background: linear-gradient(135deg, #8dd1ff, #ffffff);
+}
+.accordion{
+
+
+}
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #ffffff; /* Línea inferior verde */
+}
+
+h1 {
+    color: #333; /* Color del título principal */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333; /* Color del título secundario */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la barra de navegación */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacio entre elementos de la barra de navegación */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px; /* Espacio interno de los elementos de la barra de navegación */
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #75c9fa; /* Color del texto al pasar el cursor sobre los enlaces */
+    background-color: #d6d6d6; /* Cambia el color de fondo al pasar el cursor */
+}
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+p {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    text-align: center; /* Alinear el texto al centro */
+    margin-bottom: 20px; /* Margen inferior */
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2); /* Sombra del texto */
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffff; /* Cambio de color al pasar el cursor sobre el botón de enviar */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto del pie de página */
+}
+
+c.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+#precios {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#precios table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#precios th {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+#precios td, #precios th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#precios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#precios tr:hover {
+    background-color: #ddd;
+}
+
+#localizacion {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#localizacion h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#localizacion iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+#recetas {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#recetas h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#recetas h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#recetas p {
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#recetas ul {
+    list-style-type: disc;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#recetas img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 400px;
+}
+
+#recetas .recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#recetas .recipe-container > * {
+    width: 100%;
+    max-width: 800px;
+}
+
+#agradecimientos {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.agradecimientos-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.agradecimientos-container h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#redes ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Organiza los íconos horizontalmente */
+    flex-direction: row; /* Alinea los íconos de izquierda a derecha */
+}
+
+#redes ul li {
+    margin-right: 10px; /* Espacio entre los íconos */
+}
+
+#redes ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último ícono */
+}
+
+#redes ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+#redes ul li a img {
+    width: 60px; /* Ancho inicial de los logos */
+    height: auto; /* Altura ajustada automáticamente */
+    transition: transform 0.3s, filter 0.3s; /* Transición suave de la transformación y el filtro */
+}
+
+#redes ul li a img:hover {
+    transform: scale(1.1); /* Expandir el logo al 110% de su tamaño original */
+    filter: brightness(120%); /* Aumentar el brillo para cambiar el color */
+}
+.recipe-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita */
+    text-decoration: underline; /* Subrayado */
+}
+
+.recipe-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-style: italic; /* Cursiva */
+}
+
+.recipe-details ul {
+    margin-bottom: 15px;
+}
+
+.recipe-details li {
+    margin-bottom: 5px;
+    font-weight: bold; /* Negrita */
+}
+
+.recipe-details p {
+    margin-bottom: 10px;
+    color: #555; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+header {
+    position: relative;
+    overflow: hidden; /* Para recortar el contenido que se desborde */
+}
+
+#headerContent {
+    position: relative;
+    z-index: 1;
+}
+
+#accordionBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 0;
+    overflow: hidden;
+    overflow: hidden;
+    transform: translateY(-50%);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#accordionBackground .carousel-item img {
+    width: 80%; /* Para asegurarse de que la imagen cubra todo el contenedor */
+    height: auto;
+    object-fit: cover; /* Para recortar la imagen según el tamaño del contenedor */
+}
